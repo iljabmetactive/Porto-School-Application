@@ -280,6 +280,7 @@ def get_students(db: Session = Depends(get_db)):
 
 @app.post("/api/students")
 def create_student(data: dict, db: Session = Depends(get_db)):
+
     student = models.Student(
         name=data["name"],
         email=data["email"],

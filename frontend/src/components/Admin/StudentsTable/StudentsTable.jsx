@@ -61,7 +61,7 @@ export default function StudentsTable({ students }) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                studentId: student.id,
+                studentId: selectedStudent.id,
                 teacherId: selectedTeacher,
                 slots: selectedSlots.map(id => ({id})),
             })
